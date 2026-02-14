@@ -1,0 +1,23 @@
+body{
+   min-width: 100vh;
+   background-color: #11242B ;
+   color: white;
+}
+.card{
+   background-color: #32454C;
+   color: white;
+}
+.card img{
+   height: 10rem;
+   width: 10rem;
+   border-radius: 50%;
+   border: 3px solid green;
+}
+.details{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+.details p{
+   text-align: center;
+}

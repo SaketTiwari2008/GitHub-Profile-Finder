@@ -1,0 +1,27 @@
+
+<% layout("layouts/boilerplate")%>
+
+<div class="row pb-5">
+  <div class="col-sm-6 offset-3 mt-5">
+    <h1 class="offset-2">GitHub Profile Finder</h1>
+    <br />
+    <form action="/" method="post">
+      <div class="row">
+        <div class="col-sm-8 offset-1">
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="type username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="col-sm-3">
+          <button type="submit" class="btn btn-success">Find</button>
+        </div>
+      </div>
+      <br />
+    </form>
+  </div>
+</div>

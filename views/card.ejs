@@ -1,0 +1,53 @@
+
+<% layout("layouts/boilerplate")%>
+<div class="row pb-5">
+  <div class="col-sm-6 offset-3 mt-5">
+    <h1 class="offset-2">GitHub Profile Finder</h1>
+    <br />
+    <form action="/" method="post">
+      <div class="row">
+        <div class="col-sm-8 offset-1">
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="type username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="col-sm-3">
+          <button type="submit" class="btn btn-success">Find</button>
+        </div>
+      </div>
+
+      <br />
+    </form>
+  </div>
+  <div class="col-sm-6 offset-3 mt-4 card-con">
+    <div class="card mx-auto shadow-lg p-4 pb-2 border border-0">
+      <img src="<%= user.avatar_url %>" class="img-fluid mx-auto" />
+      <h3 class="text-center py-2"><b><%= user.name %> </b></h3>
+      <p class="text-center px-4"><%= user.bio %></p>
+      <span class="details">
+        <p>
+          <b class="fs-5"><%= user.followers %></b> <br />
+          Followers
+        </p>
+        <p>
+          <b class="fs-5"><%= user.following %></b> <br />
+          Following
+        </p>
+        <p>
+          <b class="fs-5"><%= user.public_repos %></b> <br />
+          Repos
+        </p>
+      </span>
+      <a class="text-center mb-2" target="_blank" href="<%=user.html_url%>"
+        ><span class="btn bg-success text-light rounded-3 py-2 px-3"
+          >View GitHub Profile &rarr;</span
+        ></a
+      >
+    </div>
+  </div>
+</div>
