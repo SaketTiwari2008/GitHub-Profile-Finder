@@ -36,7 +36,6 @@ app.post("/", async (req, res) => {
   let { username } = req.body;
   let user = await getUser(username);
   if (user.status === 200) {
-    console.log(user);
     res.render("card.ejs", { user: user.data });
   } else {
     res.redirect("/error");
@@ -48,5 +47,5 @@ app.get("/error", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("App listening at Port: ", PORT);
+  console.log("App listening at PORT: ", PORT);
 });
